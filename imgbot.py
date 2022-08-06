@@ -1,6 +1,5 @@
 
 import requests
-from prettyprinter import pprint
 from bs4 import BeautifulSoup as bs
 
 from telebot import TeleBot,telebot,types
