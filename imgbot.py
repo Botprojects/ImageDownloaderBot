@@ -1,4 +1,5 @@
 
+
 import os
 import requests
 from bs4 import BeautifulSoup as bs
@@ -24,7 +25,17 @@ def welcome_message(msg):
 ሠላም ውድ {first_name} እንኳን ወደ ፎቶ ማውረጃ ቦት በሠላም መጡ😊'''
     bot.send_message(msg.chat.id,text,reply_markup=button,parse_mode='HTML')
 
+@bot.message_handler(commands=['help'])
+def help(message):
+    text = '''አጠቃቀም
+የፈለጋችሁትን ፎቶ ፅፋቹ ላኩለት፤ለምሳሌ Cat ከዛ ቦቱ ፎቶውን አውርዶ ይልክላችሗል።
 
+How to use?
+It's pretty eas using this bot. Just send me a name of photo you wanna download.
+
+Example Cat
+The bot immediately download the image then sends to you.'''
+    bot.reply_to(message,text)
     
 @bot.message_handler(func=lambda m: True)
 def image_downloader(msg):
