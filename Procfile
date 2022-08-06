@@ -1,1 +1,1 @@
-worker: python3 imgbot
+worker: python3 imgbot.py
