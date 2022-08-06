@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup as bs
 from telebot import TeleBot,telebot,types
 from telebot.types import InlineKeyboardMarkup,InlineKeyboardButton
 
-bot = telebot.TeleBot(os.getenv('imgBotToken')
+bot = telebot.TeleBot(os.getenv('imgBotToken'))
 
 button = InlineKeyboardMarkup()
 group = InlineKeyboardButton(text='⚡️Our Group⚡️',url='t.me/developerschat')
